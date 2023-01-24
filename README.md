@@ -48,33 +48,24 @@ This command will start a new container from the "my-dotnet-app" image and map p
 ## ![docker](https://miro.medium.com/max/640/1*OARpkeBkn_Tw3vk8H769OQ.webp)
 
 ## Part 2: [Create an Azure container registry](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-prepare-acr)
-- [ ] Task 1: [Create a container registry](https://github.com/LexisNexis-RBA/terraform-azurerm-container-registry)
+- [ ] Task 1: [Create a container registry](https://github.com/Azure-Terraform/terraform-azurerm-container-registry)
 - [ ] Task 2: Log in to registry
 - [ ] Task 3: Tag a container image
 - [ ] Task 4: Push image to registry
 - [ ] Task 5: List container images
 - [ ] Task 6: Run image from registry
 
-## Part 3: Setup Terraform Enterprise and Github Actions
-- [ ] Task 1: [Create github repository](https://github.com/LexisNexis-TFE)
-- [ ] Task 2: [Create Terraform enterprise workspace](https://tfe.lnrisk.io/)
-- [ ] Task 3: [Add provider.tf file in repository](https://github.com/LexisNexis-TFE/tfe-workspace-template/blob/main/provider.tf)
-- [ ] Task 4: Configure a New Workspace
-- [ ] Task 5: Add environment variables
-- [ ] Task 6: Add Terraform variables
-- [ ] Task 7: Test Run Trigger 
-
-## Part 4: Deploy the Azure Kubernetes Service into Azure
+## Part 3: Deploy the Azure Kubernetes Service into Azure
 - [ ] Task 1: [Deploy AKS into azure](https://github.com/Azure-Terraform/terraform-azurerm-kubernetes)
 - [ ] Task 2: [Deploy resource group](https://github.com/Azure-Terraform/terraform-azurerm-resource-group)
 - [ ] Task 3: [Deploy virtual network with subnet for application gateway](https://github.com/Azure-Terraform/terraform-azurerm-virtual-network)
 - [ ] Task 4: [Deploy azure active directory pod identity into azure kubernetes service](https://github.com/Azure-Terraform/terraform-azurerm-kubernetes-aad-pod-identity)
-- [ ] Task 5: [Deploy azure application gateway and attach to subnet](https://github.com/LexisNexis-RBA/terraform-azurerm-application-gateway)
+- [ ] Task 5: [Deploy azure application gateway and attach to subnet](https://github.com/Azure-Terraform/terraform-azurerm-application-gateway)
 - [ ] Task 6: Deploy user assigned identity and role assignment to access the application gateway
 - [ ] Task 7: Deploy ingress controller using helm chart and application gateway
 - [ ] Task 8: Deploy application into Azure Kubernetes Service
 
-## Part 5: [Deploy Service Mesh](https://linkerd.io/2.10/getting-started/)
+## Part 4: [Deploy Service Mesh](https://linkerd.io/2.10/getting-started/)
 - [ ] Task 2: [Create Linkerd service mesh](https://github.com/Azure-Terraform/terraform-helm-linkerd)
 - [ ] Task 3: Validate your Kubernetes cluster
 - [ ] Task 4: Install the control plane onto your cluster
@@ -85,7 +76,7 @@ This command will start a new container from the "my-dotnet-app" image and map p
 
 ## ![service_mesh](https://linkerd.io/uploads/2017/04/linkerd-service-mesh-diagram-1024x587.png)
 
-## Part 6: [Managing Secrets with Vault Enterprise](https://learn.hashicorp.com/tutorials/vault/key-management-secrets?in=vault/adp)
+## Part 5: [Managing Secrets with Vault Enterprise](https://learn.hashicorp.com/tutorials/vault/key-management-secrets?in=vault/adp)
 - [ ] Task 1: [Setup AKS cluster for vault](https://github.com/Azure-Terraform/code-examples/blob/master/hashicorp-vault/main.tf)
 - [ ] Task 2: Configure Azure Key Vault
 - [ ] Task 3: Enable Key Management secrets engine
@@ -97,13 +88,13 @@ This command will start a new container from the "my-dotnet-app" image and map p
 
 ## ![hashicorp_vault](https://www.datocms-assets.com/2885/1576778470-vault-k8s-auth.png)
 
-## Part 7: [Test Azure Kubernetes Service](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#viewing-finding-resources)
+## Part 6: [Test Azure Kubernetes Service](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#viewing-finding-resources)
 - [ ] Task 1: Tunnel into the Azure Kubernetes Service cluster
 - [ ] Task 2: To monitor progress, use the kubectl get service command ```kubectl get service <service> --watch```
 - [ ] Task 3: confirm coredns, kube-proxy, azure-cni, azure-ip. pods are running succesfully
 ```kubectl get pods -o wide --all-namespaces```
 
-## Part 8: [Create Helm Chart for App](https://docs.microsoft.com/en-us/learn/modules/aks-app-package-management-using-helm/4-create-install-helm-chart)
+## Part 7: [Create Helm Chart for App](https://docs.microsoft.com/en-us/learn/modules/aks-app-package-management-using-helm/4-create-install-helm-chart)
 - [ ] Task 1: Create Helm chart by templating the collected resource yamls
 - [ ] Task 2: Understand and define Deployment, HorizontalPodAutoscaler, Ingress, Service, ServiceAccount
 - [ ] Task 3: Configure image, repository, pullPolicy
@@ -113,21 +104,21 @@ This command will start a new container from the "my-dotnet-app" image and map p
 
 ## ![helm](https://docs.microsoft.com/en-us/learn/modules/aks-app-package-management-using-helm/media/4-helm-chart-process.svg)
 
-## Part 9: [Setup Storage Account](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-powershell)
+## Part 8: [Setup Storage Account](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-powershell)
 - [ ] Task 2: [Deploy storage account](https://github.com/Azure-Terraform/terraform-azurerm-storage-account)
 - [ ] Task 3: Create a storage account
 - [ ] Task 4: 'General-purpose V2' storage account provides access to all of the Azure Storage services: blobs, files, queues, tables, and disks
 - [ ] Task 5: Selection Replication Geo-redundant storage (GRS)	or Locally redundant storage (LRS)	
 
-## Part 10: Monitoring with Azure Monitor and Log Analytics
-- [ ] [Task 1: Create Azure Monitor and Log Analytics environment](https://github.com/LexisNexis-RBA/terraform-azurerm-log-analytics-diagnostic-setting/blob/main/examples/sandbox/aks_activity/main.tf)
+## Part 9: Monitoring with Azure Monitor and Log Analytics
+- [ ] [Task 1: Create Azure Monitor and Log Analytics environment](https://github.com/Azure-Terraform/terraform-azurerm-log-analytics-diagnostic-setting/blob/main/examples/sandbox/aks_activity/main.tf)
 - [ ] Task 2: Explore AzureActivity with table schema
 - [ ] Task 3: Write a query using the AzureActivity table
 - [ ] Task 4: Add a filter to the query to reduce the number of records that are returned
 - [ ] Task 5: Work with charts to analyze the results of the query
 
-## Part 11: [Set up an Azure Database](https://docs.microsoft.com/en-us/azure/mysql/tutorial-design-database-using-portal)
-- [ ] Task 2: [Create an Azure Database for MySQL](https://github.com/LexisNexis-RBA/terraform-azurerm-mysql-server)
+## Part 10: [Set up an Azure Database](https://docs.microsoft.com/en-us/azure/mysql/tutorial-design-database-using-portal)
+- [ ] Task 2: [Create an Azure Database for MySQL](https://github.com/Azure-Terraform/terraform-azurerm-mysql-server)
 - [ ] Task 3: Configure the server firewall
 - [ ] Task 4: Use prefered tool to create a database
 - [ ] Task 5: Load sample data
@@ -137,14 +128,14 @@ This command will start a new container from the "my-dotnet-app" image and map p
 
 ## ![azure_database](https://azurecomcdn.azureedge.net/cvt-3131097a9e27079f901976495860cdc76765c3d47aa3ebc579b4e46ae5dda929/images/page/services/mysql/benefit-1.png)
 
-## Part 12: Scale the application and test HA
+## Part 11: Scale the application and test HA
 - [ ] Task 1: Increase service instances from the Kubernetes dashboard
 - [ ] Task 2: Increase service instances beyond available resources
 - [ ] Task 3: Restart containers and test HA
 - [ ] Task 4: Configure Azure Database for MySQL DB Autoscale
 - [ ] Task 5: Test Azure Database for MySQL DB Autoscale
 
-## Part 13: Working with services and routing application traffic
+## Part 12: Working with services and routing application traffic
 - [ ] Task 1: Scale a service without port constraints
 - [ ] Task 2: Update an external service to support dynamic discovery with a load balancer
 - [ ] Task 3: Adjust CPU constraints to improve scale
@@ -181,4 +172,3 @@ This command will start a new container from the "my-dotnet-app" image and map p
 - [ ] Task 5: Watch Argocd sync the application
 
 ## ![argocd](https://argo-cd.readthedocs.io/en/stable/assets/argocd_architecture.png)
-
