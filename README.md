@@ -2,7 +2,7 @@
 
 Below is a diagram of the solution architecture we are building towards. This is An example solution would be an internal web application that allows employees to access and manage their company benefits. The web application would be hosted in an AKS cluster and would be composed of multiple microservices such as user management, claims management, and plan management. Users would be authenticated via Azure Active Directory and access to the web application would be restricted via Azure Virtual Network and Network Security Groups. The web application would be load balanced via Azure Load Balancer with Nginx and would be able to handle high traffic. The application data would be stored in Azure MySQL Flex Server and would be highly available and scalable. Azure Monitor would be used to monitor the performance of the web application, and Azure Container Registry would be used to store and manage the Docker images used by the application.
 
-### ![azure-architecture_2_tier](./images/kubernetes-hybrid-azure-7-17-22.png)
+### ![azure-architecture_2_tier](./images/kubernetes-hybrid-azure-mbs-7-28-22.png)
 
 ## Pre-requisites 
 ### Part 1: [Setup Terraform Enterprise](https://developer.hashicorp.com/terraform/enterprise)
