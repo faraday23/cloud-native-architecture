@@ -45,6 +45,17 @@ Once the image is built, it can be run using the "docker run" command, like so:
 `docker run -p 8080:80 my-dotnet-app`  
 This command will start a new container from the "my-dotnet-app" image and map port 8080 on the host to port 80 in the container.
 
+- What is the purpose of the container?
+- What base image should be used as the starting point?
+- What dependencies are required to run the application in the container?
+- How can the container be made as small and secure as possible?
+- How will data be persisted in the container?
+- How will the application communicate with other containers and services?
+- How will logs be collected and monitored in the container?
+- What resource constraints should be set for the container?
+- How will the container be tested and deployed in different environments?
+- How will the container be updated and managed over time?
+
 ## ![docker](https://miro.medium.com/max/640/1*OARpkeBkn_Tw3vk8H769OQ.webp)
 
 ## Part 2: [Create an Azure container registry](https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-prepare-acr)
